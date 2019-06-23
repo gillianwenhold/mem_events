@@ -8,7 +8,8 @@ class MemEvents::CLI
   end
 
   def list_events
-    @events = MemEvents::Events.list
+    MemEvents::Events.list
+    @events = MemEvents::Events.all
   end
 
   def find_events

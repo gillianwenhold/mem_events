@@ -32,6 +32,9 @@ class MemEvents::Events
       self.new(title, date)
     end
 
+  end
+
+  def self.all
     @@all.each_with_index do |item, index|
       puts "#{index+1}. #{item.name} - #{item.time}"
     end
