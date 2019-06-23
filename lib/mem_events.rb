@@ -1,6 +1,2 @@
-require "mem_events/version"
-
-module MemEvents
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./mem_events/version"
+require_relative "./mem_events/cli"
