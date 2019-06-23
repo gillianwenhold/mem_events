@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["gillianwenhold"]
   spec.email         = ["gwenhold@mac.com"]
 
-  spec.summary       = %q{A CLI to learn more about events happening in Memphis that are listed on Choose901}
+  spec.summary       = %q{A CLI to learn more about events happening in Memphis}
   spec.homepage      = "https://github.com/gillianwenhold/mem_events.git"
   spec.license       = "MIT"
 

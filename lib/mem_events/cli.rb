@@ -2,16 +2,23 @@ class MemEvents::CLI
 
   def call
     puts "Events in Memphis"
+    make_events_list
     list_events
     find_events
     goodbye
   end
 
-  def make_events
-    BASE_PATH = "https://ilovememphisblog.com/"
+  def make_events_list
+    # all_events = Scraper.get_all_events to get an array of events including the name, date, and detail urls
+    # Pass array into Events.create_from_selection(all_events) to parse into list of events
+  end
 
+  def make_event_details
+    # event_details = Pass detail url from each event into Scraper.get_event_details(events.detail_url) to get an array of details for each event
+    # Pass array into Events.add_details(event_details) to add details to each event
+  end
 
-
+  end
   def list_events
     MemEvents::Events.list
     @events = MemEvents::Events.all
