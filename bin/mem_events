@@ -1,5 +1,6 @@
 #! /usr/bin/env ruby
 
-require "./lib/mem_events"
+require "bundler/setup"
+require "mem_events"
 
 MemEvents::CLI.new.call
