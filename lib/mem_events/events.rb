@@ -4,15 +4,36 @@ require "open-uri"
 
 class MemEvents::Events
 
-  attr_accessor :all, :name, :time
+  attr_accessor :all, :name, :detail_url, :time, :location, :description, :cost, :website, :event_category
 
   @@all = []
 
-  def initialize(name, time)
-    @name = name
-    @time = time
+  def initialize(hash)
+    hash.each do |key, val|
+      self.send("#{key}=", val)
+    end
     @@all << self
   end
+
+  def self.create_from_selection(all_events)
+    all_events.each do |event|
+      self.new(event)
+    end
+  end
+
+  def self.add_details(event_details)
+    event_details.each do |key, val|
+      self.send("#{key}=", val)
+    end
+  end
+
+  def self.all
+    @@all
+  end
+
+end
+
+=begin
 
   def self.list
 
@@ -45,3 +66,5 @@ class MemEvents::Events
   end
 
 end
+
+=end
