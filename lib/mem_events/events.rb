@@ -1,3 +1,7 @@
+require "pry"
+require "nokogiri"
+require "open-uri"
+
 class MemEvents::Events
 
   attr_accessor :all, :name, :time
