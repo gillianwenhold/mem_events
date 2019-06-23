@@ -29,6 +29,8 @@ class MemEvents::CLI
         puts "Enter the number of another event, 'more' to see more, or 'exit' to quit!"
       when "more"
         more_events
+      when "exit"
+        break
       else
         puts "Not sure what you're asking for...try again!"
       end

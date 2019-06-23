@@ -1,6 +1,6 @@
 class MemEvents::Events
 
-  attr_accessor :all
+  attr_accessor :all, :name, :time
 
   @@all = []
 
@@ -11,6 +11,7 @@ class MemEvents::Events
   end
 
   def self.list
+
     array = [
       ["The Awakening 'Paint with a Twist'", "Sun June 23rd 3:00pm - 5:00pm"],
       ["2019 Craft Food & Wine Festival", "Sun June 23rd 4:00pm - 9:00pm"],
@@ -29,6 +30,10 @@ class MemEvents::Events
       title = item[0]
       date = item[1]
       self.new(title, date)
+    end
+
+    @@all.each_with_index do |item, index|
+      puts "#{index+1}. #{item.name} - #{item.time}"
     end
   end
 
