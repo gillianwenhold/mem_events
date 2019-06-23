@@ -7,6 +7,11 @@ class MemEvents::CLI
     goodbye
   end
 
+  def make_events
+    BASE_PATH = "https://ilovememphisblog.com/"
+
+
+
   def list_events
     MemEvents::Events.list
     @events = MemEvents::Events.all
